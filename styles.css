@@ -110,3 +110,7 @@ hr {
 .currentTemp > div, .tmrwTemp > div{
     color: white;
 }
+
+.loading{
+    display: none;
+}

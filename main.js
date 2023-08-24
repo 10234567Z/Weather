@@ -6,8 +6,8 @@ let locName = "";
 async function GetWeather(url) {
   document.querySelector(".weatherContainer").style.opacity = 0;
   document.querySelector(".weatherContainer").style.visibility = "hidden";
-
   document.querySelector(".errors").textContent = "";
+  document.querySelector(".loading").style.display = "block";
   try {
     if (locName === null || locName.trim() === "") {
       throw new Error("Empty Location name submitted");
@@ -16,11 +16,12 @@ async function GetWeather(url) {
     if (response.status === 400) {
       throw new Error("Not a valid location");
     } else {
+      document.querySelector(".loading").style.display = "none";
       const responseJson = await response.json();
-      console.log(responseJson);
       updateUI(responseJson);
     }
   } catch (error) {
+    document.querySelector(".loading").style.display = "none";
     document.querySelector(".errors").textContent = error.message;
   }
 }
