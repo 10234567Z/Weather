@@ -5,15 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
-    <link rel="stylesheet" src="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        Type Location here: <input type="text" class="search"><br>
-        <div class="location"></div>
-        <div class="currentWeather"></div>
+        <h1>Weathering</h1>
+        <div class="navBar">
+            <p>Type the city name here</p>
+            <div class="searchCont">
+                <input type="text" class="search">
+                <img src="/Content/images/search.svg" alt="search" width="40px" height="40px">
+            </div>
+        </div>
+        <div class="subContainer">
+            <div class="weatherContainer">
+                <div class="currenWeather">
+                    <div class="currentTemp">
+                        <div class="inC"></div>
+                        <div class="inF"></div>
+                    </div>
+                    <img src="" alt="" class="currentTIMG" width="30px" height="30px">
+                    <p class="conditions"></p>
+                    <img src="" alt="" class="tmrwCondIMG" width="30px" height="30px">
+                </div>
+
+                <div class="tmrwWeather">
+                    <div class="tmrwTemp">
+                        <div class="inTmrwC"></div>
+                        <div class="inTmrwF"></div>
+                    </div>
+                    <img src="" alt="" class="tmrwTIMG" width="30px" height="30px">
+                    <p class="tmrwConditions"></p>
+                    <img src="" alt="" class="tmrwCondIMG" width="30px" height="30px">
+                    <div class="rainChance"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
