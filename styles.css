@@ -21,7 +21,7 @@ h1 {
     width: 100%;
 }
 
-.navBar{
+.navBar {
     background-color: #b0daff;
     width: 90%;
     border-radius: 6px;
@@ -31,16 +31,17 @@ h1 {
     padding: 5px;
     gap: 10px;
 }
-.searchCont{
+
+.searchCont {
     display: flex;
     flex-direction: row;
     place-items: center;
     position: relative;
-    translate: 10px 0px;
+    translate: 25px 0px;
     gap: 5px;
 }
 
-input{
+input {
     outline: none !important;
     border-radius: 15px;
     border: 1px ridge black;
@@ -51,25 +52,61 @@ input{
     transition: all cubic-bezier(0.46, 0.13, 1, 0.39) 0.2s;
 }
 
-input:focus{
+input:focus {
     border: 2px ridge aquamarine;
 }
 
-.searchCont > img{
+.searchCont>img {
     padding: 5px;
     border-radius: 50%;
     transition: all ease-in-out 0.2s;
 }
 
-.searchCont > img:hover{
+.searchCont>img:hover {
     background-color: rgba(0, 0, 0, 0.4);
 }
-p{
+
+p {
     text-align: center;
+}
+
+hr {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .weatherContainer {
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s ease-in-out;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 9px;
+    width: 300px;
+}
+
+.name{
+    color: white;
+}
+
+.currentWeather , .tmrwWeather{
+    text-align: center;
+}
+
+.nameCont{
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.tmrwWeather > hr , .currentWeather > hr{
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    translate: 50% 0;
+}
+
+.currentTemp > div, .tmrwTemp > div{
+    color: white;
 }
